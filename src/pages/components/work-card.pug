@@ -1,0 +1,8 @@
+mixin work-card(url, year, title, description)
+    div 
+        figure 
+            img(src=url, title=title, alt=title)
+            figcaption
+                p= year 
+                h3= title 
+                p!= description

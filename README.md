@@ -15,3 +15,8 @@ Arco evidencia las competencias desarrolladas en _HTML5_ y _CSS3_, utilizando lo
 - Uso de _JavaScript Vanilla_ para realizar funciones de interacción con el usuario.
 - Empleo de conceptos de diseño visual para asegurar la accesibilidad respectiva.
 - Uso de las inteligencias artificiales como _Copilot_ para la generación de textos.
+
+### Créditos
+- Diseño inspirado por Artisans - Classic Art Collection Website.
+- Imágenes obtenidas de Pexels.
+- Iconos descargados de Flaticon. Los derechos de autor de los iconos pertenecen a sus respectivos autores.
