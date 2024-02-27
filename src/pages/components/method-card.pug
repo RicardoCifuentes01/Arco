@@ -1,19 +1,20 @@
 mixin method-card(url, title, author, description)
-    div 
-        figure 
-            img(src=url, title=title, alt=title)
-        h3= title 
-        p= author
-        button 
-            svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
-                line(x1="12", y1="5", x2="12", y2="19")
-                line(x1="5", y1="12", x2="19", y2="12")
-                title Más información
-                desc Más información
-        p= description
-        button 
-            svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
-                polyline(points="15 18 9 12 15 6")
-                title Regresar
-                desc Regresar
+    div(class="learning__method") 
+        figure(class="learning__method__figure") 
+            img(src=url, title=title, alt=title, class="learning__method__figure__img")
+        div 
+            h3= title 
+            p= author
+            button(class="learning__method__button--more" type="button") 
+                svg(class="learning__method__button--more__svg" xmlns="http://www.w3.org/2000/svg", width="20", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="4", stroke-linecap="round", stroke-linejoin="round")
+                    line(x1="12", y1="8", x2="12", y2="22")
+                    line(x1="5", y1="15", x2="19", y2="15")
+                    title Más información
+                    desc Más información
+            p(class="learning__method__description")= description
+            button(class="learning__method__button--back" type="button") 
+                svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                    polyline(points="15 18 9 12 15 6")
+                    title Regresar
+                    desc Regresar
 
