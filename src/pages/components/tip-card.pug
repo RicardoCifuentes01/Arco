@@ -1,8 +1,8 @@
 mixin tip-card(number, url, title, description)
-    div(class="tips__tip") 
-        div(class="tips__tip__decoration") 
-            p(class="tips__tip__number")!= number 
-            figure(class="tips__tip__figure") 
+    div(class="tips__container__tip") 
+        div(class="tips__container__tip__decoration") 
+            p(class="tips__container__tip__number")!= number 
+            figure(class="tips__container__tip__figure") 
                 img(src=url, alt=title, title=title)
         h3!= title
         p!= description

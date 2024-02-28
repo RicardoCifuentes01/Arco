@@ -3,7 +3,7 @@ mixin method-card(url, title, author, description)
         figure(class="learning__method__figure") 
             img(src=url, title=title, alt=title, class="learning__method__figure__img")
         div 
-            h3= title 
+            h3!= title 
             p= author
             button(class="learning__method__button--more" type="button") 
                 svg(class="learning__method__button--more__svg" xmlns="http://www.w3.org/2000/svg", width="20", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="4", stroke-linecap="round", stroke-linejoin="round")

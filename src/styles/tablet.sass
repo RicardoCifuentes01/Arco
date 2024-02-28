@@ -1,0 +1,144 @@
+@import "./components/variables"
+
+//general styles
+h1
+    margin: 0
+    font-size: 56px
+    line-height: 56px
+
+figure
+    max-width: none
+    margin: $medium-smaller auto
+
+//specific styles
+
+//main
+.main__poem
+    width: 43.3%
+
+.main__title__poem
+    display: flex
+    margin-bottom: $larger-medium
+    justify-content: space-between
+    align-items: flex-end
+
+//works
+.works__slider
+
+    .works__works__slider__work
+        width: 180px
+
+//learning
+.learning__description
+    text-align: center
+
+.learning__methods
+    max-width: none
+    flex-direction: row
+    gap: 2%
+
+.learning__method
+
+    div
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        button
+            margin: $smaller auto
+
+//artists
+.artists__nad
+    display: flex
+
+    > p
+        width: 25%
+
+    div
+        display: flex
+        width: 74%
+        gap: 68px
+
+        > p
+            width: 50%
+
+.artists__slider
+    overflow-y: hidden
+
+.artists__slider__artist
+    display: flex
+    gap: $medium-smaller
+
+    h3
+        text-align: left
+        font-size: 4vw
+        line-height: 4vw
+
+    figure
+        width: 75%
+        display: flex
+        gap: $medium-smaller
+        margin: 0
+
+        img
+            width: 50%
+
+        figcaption
+            width: 50%
+
+//tips
+
+.tips__container
+    display: grid
+    gap: $medium-smaller
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(6, auto)
+    grid-template-areas: "t1 t2" "t3 t2" "t3 t4" "t5 t5" "t6 t6" "t7 t7"
+
+.tips__container__tip
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    padding: $medium-smaller
+    margin: 0
+
+.tips
+    padding: $larger-medium $medium-smaller
+
+.tips__container__tip__number
+    font-size: 64px
+    line-height: 64px
+
+.tips__container__tip__figure
+    width: 42px
+    margin: 0
+
+.tips__container > :nth-child(1)
+    grid-area: t1
+
+.tips__container > :nth-child(2)
+    grid-area: t2
+
+.tips__container > :nth-child(3)
+    grid-area: t3
+
+.tips__container > :nth-child(4)
+    grid-area: t4
+
+.tips__container > :nth-child(5)
+    grid-area: t5
+
+.tips__container > :nth-child(6)
+    grid-area: t6
+
+.tips__container > :nth-child(7)
+    grid-area: t7
+
+//footer
+.footer__technologies
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.footer__figure
+    flex-direction: column
+    gap: $smallest-maximum
+    width: 30%

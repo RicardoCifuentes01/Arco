@@ -116,14 +116,11 @@ p, figcaption
 
             h3
                 color: $texts-background-white
-                font-size: 14px
-                line-height: 14px
+                font-size: $text-size
+                line-height: $text-size
 
             p
-                font-size: 14px
-
-.works__slider::-webkit-scrollbar, .artists__slider::-webkit-scrollbar
-    display: none
+                font-size: $text-size
 
 .works__button--previous, .works__button--next
     display: none
@@ -244,7 +241,7 @@ p, figcaption
 .tips
     padding: $larger-medium $medium-smaller 0
 
-.tips__tip
+.tips__container__tip
     margin: $larger-medium 0
 
     h3
@@ -254,14 +251,14 @@ p, figcaption
         line-height: $line-height-title-3
         color: $texts-background-black
 
-.tips__tip__decoration
+.tips__container__tip__decoration
     display: flex
 
-.tips__tip__number
+.tips__container__tip__number
     font-size: 90px
     line-height: 90px
 
-.tips__tip__figure
+.tips__container__tip__figure
     width: 64px
     margin: 0
 
@@ -294,7 +291,7 @@ footer
 
 .footer__date
     width: fit-content
-    margin: 0 auto
+    margin: $larger-medium auto
     color: $texts-background-white
 
 .footer_link

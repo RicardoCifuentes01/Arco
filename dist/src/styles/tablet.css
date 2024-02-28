@@ -1,0 +1,153 @@
+h1 {
+  margin: 0;
+  font-size: 56px;
+  line-height: 56px;
+}
+
+figure {
+  max-width: none;
+  margin: 20px auto;
+}
+
+.main__poem {
+  width: 43.3%;
+}
+
+.main__title__poem {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.works__slider .works__works__slider__work {
+  width: 180px;
+}
+
+.learning__description {
+  text-align: center;
+}
+
+.learning__methods {
+  max-width: none;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.learning__method div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.learning__method div button {
+  margin: 10px auto;
+}
+
+.artists__nad {
+  display: flex;
+}
+.artists__nad > p {
+  width: 25%;
+}
+.artists__nad div {
+  display: flex;
+  width: 74%;
+  gap: 68px;
+}
+.artists__nad div > p {
+  width: 50%;
+}
+
+.artists__slider {
+  overflow-y: hidden;
+}
+
+.artists__slider__artist {
+  display: flex;
+  gap: 20px;
+}
+.artists__slider__artist h3 {
+  text-align: left;
+  font-size: 4vw;
+  line-height: 4vw;
+}
+.artists__slider__artist figure {
+  width: 75%;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+.artists__slider__artist figure img {
+  width: 50%;
+}
+.artists__slider__artist figure figcaption {
+  width: 50%;
+}
+
+.tips__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "t1 t2" "t3 t2" "t3 t4" "t5 t5" "t6 t6" "t7 t7";
+}
+
+.tips__container__tip {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 0;
+}
+
+.tips {
+  padding: 40px 20px;
+}
+
+.tips__container__tip__number {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.tips__container__tip__figure {
+  width: 42px;
+  margin: 0;
+}
+
+.tips__container > :nth-child(1) {
+  grid-area: t1;
+}
+
+.tips__container > :nth-child(2) {
+  grid-area: t2;
+}
+
+.tips__container > :nth-child(3) {
+  grid-area: t3;
+}
+
+.tips__container > :nth-child(4) {
+  grid-area: t4;
+}
+
+.tips__container > :nth-child(5) {
+  grid-area: t5;
+}
+
+.tips__container > :nth-child(6) {
+  grid-area: t6;
+}
+
+.tips__container > :nth-child(7) {
+  grid-area: t7;
+}
+
+.footer__technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer__figure {
+  flex-direction: column;
+  gap: 5px;
+  width: 30%;
+}

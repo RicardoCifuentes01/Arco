@@ -129,10 +129,6 @@ p, figcaption {
   font-size: 14px;
 }
 
-.works__slider::-webkit-scrollbar, .artists__slider::-webkit-scrollbar {
-  display: none;
-}
-
 .works__button--previous, .works__button--next {
   display: none;
 }
@@ -267,10 +263,10 @@ p, figcaption {
   padding: 40px 20px 0;
 }
 
-.tips__tip {
+.tips__container__tip {
   margin: 40px 0;
 }
-.tips__tip h3 {
+.tips__container__tip h3 {
   margin-bottom: 20px;
   font-family: "Hind Guntur";
   font-size: 36px;
@@ -278,16 +274,16 @@ p, figcaption {
   color: #1F1F1F;
 }
 
-.tips__tip__decoration {
+.tips__container__tip__decoration {
   display: flex;
 }
 
-.tips__tip__number {
+.tips__container__tip__number {
   font-size: 90px;
   line-height: 90px;
 }
 
-.tips__tip__figure {
+.tips__container__tip__figure {
   width: 64px;
   margin: 0;
 }
@@ -324,7 +320,7 @@ footer hr {
 .footer__date {
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 40px auto;
   color: #F6F6F6;
 }
 
