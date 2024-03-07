@@ -1,0 +1,146 @@
+.header {
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.header__button--open {
+  display: none;
+}
+
+.header__nav {
+  display: block;
+}
+.header__nav ul {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+.header__nav ul li {
+  font-size: 12px;
+}
+
+.hr {
+  display: block;
+  margin: 0 20px;
+}
+
+.main__title {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.main__figure img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works {
+  display: flex;
+  gap: 20px;
+}
+
+.works__buttons button {
+  display: inline;
+  margin: 40px 5px;
+  border-radius: 50px;
+  transition: 0.1s ease;
+}
+.works__buttons button figure {
+  margin: 0;
+  height: 60px;
+}
+.works__buttons button figure img {
+  margin: 0;
+}
+.works__buttons button:hover {
+  cursor: pointer;
+  background-color: #F6F6F6;
+}
+.works__buttons button:hover img {
+  filter: invert(1);
+}
+
+.works__slider .works__works__slider__work {
+  width: 300px;
+}
+
+.artists__slider li {
+  justify-content: space-between;
+}
+.artists__slider li img {
+  max-height: 600px;
+  height: -moz-max-content;
+  height: max-content;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.artists__slider__artist h3 {
+  margin: 0;
+  padding-left: 5px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.artists__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.artists__buttons {
+  position: relative;
+  margin-left: 65%;
+  margin-top: -70px;
+  z-index: 0;
+}
+.artists__buttons button {
+  display: inline;
+  margin: 0 5px;
+  border-radius: 50px;
+  transition: 0.1s ease;
+}
+.artists__buttons button figure {
+  margin: 0;
+  height: 60px;
+}
+.artists__buttons button figure img {
+  margin: 0;
+}
+.artists__buttons button:hover {
+  cursor: pointer;
+  background-color: #F6F6F6;
+}
+.artists__buttons button:hover img {
+  filter: invert(1);
+}
+
+.tips__container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "t1 t2 t2 t3" "t4 t5 t5 t3" "t6 t6 t7 t7";
+}
+
+.tips__container__tip {
+  transition: 0.1s ease;
+}
+
+.tips__container__tip:hover {
+  background-color: #1F1F1F;
+  color: #F6F6F6;
+}
+.tips__container__tip:hover h3, .tips__container__tip:hover p {
+  color: #F6F6F6;
+}
+
+.footer__technologies {
+  flex-wrap: nowrap;
+}
+
+.footer__figure {
+  width: 15%;
+}

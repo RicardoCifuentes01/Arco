@@ -84,6 +84,10 @@ p, figcaption {
   font-size: 36px;
 }
 
+.hr {
+  display: none;
+}
+
 .main {
   padding: 40px 20px;
 }
@@ -130,6 +134,10 @@ p, figcaption {
 }
 
 .works__button--previous, .works__button--next {
+  display: none;
+}
+
+.works__slider::-webkit-scrollbar {
   display: none;
 }
 
@@ -257,6 +265,10 @@ p, figcaption {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.artists__slider::-webkit-scrollbar {
+  display: none;
 }
 
 .tips {

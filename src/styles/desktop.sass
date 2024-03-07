@@ -1,0 +1,132 @@
+@import "./components/variables"
+
+.header
+    align-items: center
+
+.header__logo
+    font-size: $title-3
+    line-height: $title-3
+
+.header__button--open
+    display: none
+
+.header__nav
+    display: block
+
+    ul
+        display: flex
+        gap: $largest-maximum
+        list-style: none
+
+        li
+            font-size: 12px
+
+.hr
+    display: block
+    margin: 0 $medium-smaller
+
+.main__title
+    font-size: 64px
+    line-height: 64px
+
+.main__figure
+    img
+        height: 300px
+        object-fit: cover
+
+.works
+    display: flex
+    gap: $medium-smaller
+
+.works__buttons
+    button
+        display: inline
+        margin: $larger-medium $smallest-maximum
+        border-radius: 50px
+        transition: 0.1s ease
+
+        figure
+            margin: 0
+            height: 60px
+
+            img
+                margin: 0
+
+    button:hover
+        cursor: pointer
+        background-color: $texts-background-white
+
+        img
+            filter: invert(1)
+
+.works__slider
+
+    .works__works__slider__work
+        width: 300px
+
+.artists__slider
+    li
+        justify-content: space-between
+
+        img
+            max-height: 600px
+            height: max-content
+            aspect-ratio: 1/1
+            object-fit: cover
+
+.artists__slider__artist
+    h3
+        margin: 0
+        padding-left: $smallest-maximum
+        font-size: $title-3
+        line-height: $line-height-title-3
+
+.artists__slider::-webkit-scrollbar
+    display: none
+
+.artists__buttons
+    position: relative
+    margin-left: 65%
+    margin-top: -70px
+    z-index: 0
+
+    button
+        display: inline
+        margin: 0 $smallest-maximum
+        border-radius: 50px
+        transition: 0.1s ease
+
+        figure
+            margin: 0
+            height: 60px
+
+            img
+                margin: 0
+
+    button:hover
+        cursor: pointer
+        background-color: $texts-background-white
+
+        img
+            filter: invert(1)
+
+.tips__container
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(3, auto)
+    grid-template-areas: "t1 t2 t2 t3" "t4 t5 t5 t3" "t6 t6 t7 t7"
+
+.tips__container__tip
+    transition: 0.1s ease
+
+.tips__container__tip:hover
+    background-color: $texts-background-black
+    color: $texts-background-white
+
+    h3, p
+        color: $texts-background-white
+
+.footer__technologies
+    flex-wrap: nowrap
+
+.footer__figure
+    width: 15%

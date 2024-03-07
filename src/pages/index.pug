@@ -16,6 +16,7 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap", rel="stylesheet")
         link(rel="stylesheet", href="../../../dist/src/styles/mobile.css")
         link(rel="stylesheet", href="../../../dist/src/styles/tablet.css" media="screen and (min-width:600px)")
+        link(rel="stylesheet", href="../../../dist/src/styles/desktop.css" media="screen and (min-width:900px)")
         title Arco
     body 
         header(class="header") 
@@ -45,6 +46,7 @@ html(lang="en")
                     h4 Ricardo Cifuentes. Perfil y portafolio.
                     figure 
                         img(src="https://i.ibb.co/DYdhyGW/platzi.png", alt="Perfil y portafolio", title="Perfil y portafolio") 
+        hr(class="hr")
         main(class="main") 
             div(class="main__title__poem") 
                 h1(class="main__title")
@@ -65,17 +67,19 @@ html(lang="en")
                 br
                 |Te invitamos a explorar y aprender con nosotros. ¡Disfruta tu visita!    
         section(class="works") 
-            h2(class="works__title") 
-                span Obras 
-                br
-                span destacadas 
-            p Desde los albores del período barroco, el violín ha sido un vehículo para la expresión musical, y numerosas obras para este instrumento han dejado una huella indeleble en la música clásica. Estas piezas, creadas por algunos de los compositores más célebres de la historia, han demostrado no solo la versatilidad y la riqueza expresiva del violín, sino también la creatividad y la innovación de los compositores que las crearon.
-            button(class="works__button--previous" type="button") 
-                figure 
-                    img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
-            button(class="works__button--next" type="button") 
-                figure 
-                    img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
+            div 
+                h2(class="works__title") 
+                    span Obras 
+                    br
+                    span destacadas 
+                p Desde los albores del período barroco, el violín ha sido un vehículo para la expresión musical, y numerosas obras para este instrumento han dejado una huella indeleble en la música clásica. Estas piezas, creadas por algunos de los compositores más célebres de la historia, han demostrado no solo la versatilidad y la riqueza expresiva del violín, sino también la creatividad y la innovación de los compositores que las crearon.
+                div(class="works__buttons") 
+                    button(class="works__button--previous" type="button") 
+                        figure 
+                            img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
+                    button(class="works__button--next" type="button") 
+                        figure 
+                            img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
             include ./components/work-card.pug
             ul(class="works__slider") 
                 +work-card('https://i.ibb.co/6gY3rZx/1.jpg', '1721', 'Las cuatro estaciones - Antonio Vivaldi', 'https://www.youtube.com/watch?v=0c0AZDSfuRQ')
@@ -113,12 +117,6 @@ html(lang="en")
                         b Descripción
             hr
             include ./components/artist-card.pug
-            button(class="artists__button--previous" type="button") 
-                figure 
-                    img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
-            button(class="artists__button--next" type="button")  
-                figure 
-                    img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
             ul(class="artists__slider")
                         +artist-card('Arcangelo<br> Corelli', 'https://i.ibb.co/wcL0Hrb/1.jpg', 'Corelli fue uno de los primeros en aplicar plenamente, con un propósito expresivo y estructurante, el nuevo sistema tonal recientemente consolidado después de al menos doscientos años de experimentación. Como violinista virtuoso fue considerado uno de los más grandes de su generación y contribuyó, a colocar el violín entre los instrumentos solistas más prestigiosos.')
                         +artist-card('Francesco<br> Veracini', 'https://i.ibb.co/fpHS4tf/2.jpg', 'Veracini viajó y trabajó en varias ciudades europeas, incluyendo Venecia, Londres, Düsseldorf y Praga. En Venecia, escribió un conjunto de sonatas para violín dedicadas al Príncipe Federico Augusto (futuro Augusto III de Polonia). En Londres, sus interpretaciones en los entreactos de las óperas representadas en el Queen´s Theatre de Westminster suscitaron gran entusiasmo del público.')
@@ -127,6 +125,13 @@ html(lang="en")
                         +artist-card('Jean-Marie<br> Leclair', 'https://i.ibb.co/Rb7QrNB/5.jpg', 'También conocido como “Leclair el Viejo”, fue un destacado violinista y compositor francés del período barroco. Nacido en Lyon, Francia, Leclair es considerado el fundador de la escuela francesa de violín. Leclair estudió danza y violín en Turín, donde se convirtió en discípulo de Giovanni Battista Somis, quien a su vez fue alumno de Arcangelo Corelli1. Por esta razón, a menudo se le conoce como "El Corelli de Francia"')
                         +artist-card('Niccolò<br> Paganini', 'https://i.ibb.co/DrtRDzG/6.jpg', 'Contribuyó con sus aportaciones al desarrollo de la «técnica moderna del violín». Paganini dominó todos los secretos del violín antes de cumplir los catorce años, al extremo de que sus profesores reconocían no tener nada más que enseñarle. <br><br>Tuvo como maestros a Giovanni Servetto y Alessandro Rolla. <br><br>Los “24 Caprichos para violín” son una de sus obras más conocidas y han servido de inspiración a numerosos compositores.')
                         +artist-card('Itzhak<br> Perlman', 'https://i.ibb.co/68KXQpw/7.jpg', 'Es un reconocido violinista, director de orquesta y maestro israelí. Considerado uno de los mejores violinistas del mundo, Perlman ha tenido una carrera internacional brillante desde que ganó la Leventritt Competition en 1964. <br><br>A lo largo de su carrera, Perlman ha realizado numerosas giras y ha actuado con frecuencia en conciertos junto al violinista estadounidense de origen israelí Pinchas Zuckerman.')
+            div(class="artists__buttons") 
+                button(class="artists__button--previous" type="button") 
+                    figure 
+                        img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
+                button(class="artists__button--next" type="button")  
+                    figure 
+                        img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
         section(class="tips") 
             h2
                 span Consejos de 
