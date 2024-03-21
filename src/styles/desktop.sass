@@ -1,30 +1,11 @@
 @import "./components/variables"
 
-.header
-    align-items: center
-
-.header__logo
-    font-size: $title-3
-    line-height: $title-3
-
-.header__button--open
-    display: none
-
+//header
 .header__nav
-    display: block
-
     ul
-        display: flex
-        gap: $largest-maximum
-        list-style: none
+        gap: $larger-medium
 
-        li
-            font-size: 12px
-
-.hr
-    display: block
-    margin: 0 $medium-smaller
-
+//main
 .main__title
     font-size: 64px
     line-height: 64px
@@ -34,11 +15,15 @@
         height: 300px
         object-fit: cover
 
+//works
 .works
     display: flex
     gap: $medium-smaller
 
 .works__buttons
+    display: flex
+    justify-content: flex-end
+
     button
         display: inline
         margin: $larger-medium $smallest-maximum
@@ -64,6 +49,14 @@
     .works__works__slider__work
         width: 300px
 
+//learning
+.learning__methods
+    flex-direction: row
+    justify-content: space-evenly
+
+.learning__method
+    height: max-content
+
 .artists__slider
     li
         justify-content: space-between
@@ -74,6 +67,7 @@
             aspect-ratio: 1/1
             object-fit: cover
 
+//artists            
 .artists__slider__artist
     h3
         margin: 0
@@ -110,6 +104,7 @@
         img
             filter: invert(1)
 
+//tips
 .tips__container
     grid-template-columns: repeat(4, 1fr)
     grid-template-rows: repeat(3, auto)
@@ -125,6 +120,7 @@
     h3, p
         color: $texts-background-white
 
+//footer
 .footer__technologies
     flex-wrap: nowrap
 

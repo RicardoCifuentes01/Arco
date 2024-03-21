@@ -15,6 +15,9 @@
     padding: 0
     box-sizing: border-box
 
+body
+    background-color: $texts-background-white
+
 h1
     color: $texts-background-black
 
@@ -71,23 +74,89 @@ p, figcaption
 //specific styles
 //header
 .header
-    padding: $medium-smaller $medium-smaller 0
-    display: flex
-    justify-content: space-between
+    position: fixed
+    height: 42px
+    z-index: 1
 
-.header__button--close, .header__nav, .header__date, .header__author
+.header__logo-buttons, .header__nav-information
+    padding: $smaller $smaller
+    width: 100%
+    background-color: rgba(246, 246, 246, 0.8)
+    backdrop-filter: blur(10px)
+
+.header__button--open
+    width: 28px
+
+.header__button--close, .header__date, .header__author
     display: none
 
 .header__logo
     font-family: $italiana
-    font-size: $title-3
+    font-size: $title-4
+    color: $texts-background-black
+
+.header__logo-buttons
+    display: flex
+    justify-content: space-between
 
 .hr
     display: none
 
+.header__nav-information
+    flex-direction: column
+    justify-content: space-between
+    height: 92vh
+    transform: translate(-100vw, 0)
+    transition: 0.1s ease
+
+.header__nav
+    width: 100%
+
+    ul
+        list-style: none
+        padding: 0
+
+    li
+        padding: $smaller 0
+        margin: $smaller 0
+        border-bottom: 1px solid $texts-background-black
+
+        a
+            color: $texts-background-black
+
+.header__information
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.header__date
+    display: block
+    margin: $medium-smaller auto
+    width: max-content
+
+.header__author
+    display: flex
+    margin: $medium-smaller 0
+    align-items: center
+    justify-content: center
+    gap: $medium-smaller
+    text-decoration: none
+    font-family: $hind-guntur
+    font-size: $text-size
+    color: $texts-background-black
+
+    h4
+        width: max-content
+    figure
+        width: $larger-medium
+        margin: 0
+
+        img
+            margin: 0
+
 //main
 .main
-    padding: $larger-medium $medium-smaller
+    padding: 60px $medium-smaller
 
 //works
 .works
@@ -134,6 +203,7 @@ p, figcaption
 //learning
 .learning__method
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    transition: transform 0.1s
 
     h3
         width: 100%
@@ -148,7 +218,6 @@ p, figcaption
     gap: $larger-medium
 
 .learning__method
-
     div
         width: 100%
         padding: $medium-smaller
@@ -178,19 +247,26 @@ p, figcaption
         background-color: $blue
         border-radius: 100%
 
+.learning__method__description, .learning__method__button--back
+    display: none
+
 .learning__method__figure
     margin: 0
     filter: grayscale(100%)
     max-width: none
+    transition: filter 0.1s linear
 
     img
         margin: 0
 
 .learning__method__description
-    display: none
+    margin-top: $medium-smaller
+    color: $texts-background-white
 
 .learning__method__button--back
-    display: none
+    margin-left: 80%
+    margin-top: $smaller
+    background-color: $texts-background-white
 
 //artists
 .artists

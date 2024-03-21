@@ -18,36 +18,43 @@ html(lang="en")
         link(rel="stylesheet", href="../../../dist/src/styles/tablet.css" media="screen and (min-width:600px)")
         link(rel="stylesheet", href="../../../dist/src/styles/desktop.css" media="screen and (min-width:900px)")
         title Arco
-    body 
-        header(class="header") 
-            p(class="header__logo") arco
-            button(class="header__button header__button--open" type="button") 
-                svg(role="img", xmlns="http://www.w3.org/2000/svg", width="36", height="24", viewBox="0 0 36 24", fill="none", stroke="currentColor", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
-                    line(x1="3", y1="7", x2="20", y2="7")
-                    line(x1="3", y1="14", x2="15", y2="14")        
-                    line(x1="3", y1="21", x2="20", y2="21")                        
-                    title Menú
-                    desc Menú
-            button(class="header__button header__button--close" type="button") 
-                svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
-                    line(x1="18", y1="6", x2="6", y2="18")
-                    line(x1="6", y1="6", x2="18", y2="18")
-                    title Cerrar menú
-                    desc Cerrar menú
-            nav(class="header__nav") 
-                ul 
-                    li OBRAS
-                    li APRENDIZAJE 
-                    li ARTISTAS 
-                    li CONSEJOS
-            p(class="header__date") Febrero 2024
-            div(class="header__author") 
-                a(href="")
-                    h4 Ricardo Cifuentes. Perfil y portafolio.
-                    figure 
-                        img(src="https://i.ibb.co/DYdhyGW/platzi.png", alt="Perfil y portafolio", title="Perfil y portafolio") 
-        hr(class="hr")
-        main(class="main") 
+    body(id="body") 
+        header(class="header" id="header")
+            div(class="header__logo-buttons") 
+                a(class="header__logo" id="logo" href="#main") arco
+                button(class="header__button header__button--open" type="button" id="openMenu") 
+                    svg(role="img", xmlns="http://www.w3.org/2000/svg", width="36", height="24", viewBox="0 0 36 24", fill="none", stroke="currentColor", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+                        line(x1="3", y1="7", x2="20", y2="7")
+                        line(x1="3", y1="14", x2="15", y2="14")        
+                        line(x1="3", y1="21", x2="20", y2="21")                        
+                        title Menú
+                        desc Menú
+                button(class="header__button header__button--close" type="button" id="closeMenu") 
+                    svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                        line(x1="18", y1="6", x2="6", y2="18")
+                        line(x1="6", y1="6", x2="18", y2="18")
+                        title Cerrar menú
+                        desc Cerrar menú
+            div(class="header__nav-information") 
+                nav(class="header__nav" id="menu") 
+                    ul 
+                        li
+                            a(href="#works") OBRAS
+                        li
+                            a(href="#learning") APRENDIZAJE 
+                        li
+                            a(href="#artists") ARTISTAS 
+                        li
+                            a(href="#tips") CONSEJOS
+                div(class="header__information")
+                    p(class="header__date" id="headerDate") Marzo 2024
+                    a(href="" class="header__author" id="headerAuthor")
+                        h4 Ricardo Cifuentes. 
+                            br
+                            | Perfil y portafolio.
+                        figure 
+                            img(src="https://i.ibb.co/DYdhyGW/platzi.png", alt="Perfil y portafolio", title="Perfil y portafolio") 
+        main(class="main" id="main") 
             div(class="main__title__poem") 
                 h1(class="main__title")
                     span Violín y 
@@ -66,7 +73,7 @@ html(lang="en")
                 br
                 br
                 |Te invitamos a explorar y aprender con nosotros. ¡Disfruta tu visita!    
-        section(class="works") 
+        section(class="works" id="works") 
             div 
                 h2(class="works__title") 
                     span Obras 
@@ -74,14 +81,14 @@ html(lang="en")
                     span destacadas 
                 p Desde los albores del período barroco, el violín ha sido un vehículo para la expresión musical, y numerosas obras para este instrumento han dejado una huella indeleble en la música clásica. Estas piezas, creadas por algunos de los compositores más célebres de la historia, han demostrado no solo la versatilidad y la riqueza expresiva del violín, sino también la creatividad y la innovación de los compositores que las crearon.
                 div(class="works__buttons") 
-                    button(class="works__button--previous" type="button") 
+                    button(class="works__button--previous" type="button" id="previousWork") 
                         figure 
                             img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
-                    button(class="works__button--next" type="button") 
+                    button(class="works__button--next" type="button" id="nextWork") 
                         figure 
                             img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
             include ./components/work-card.pug
-            ul(class="works__slider") 
+            ul(class="works__slider" id="worksSlider") 
                 +work-card('https://i.ibb.co/6gY3rZx/1.jpg', '1721', 'Las cuatro estaciones - Antonio Vivaldi', 'https://www.youtube.com/watch?v=0c0AZDSfuRQ')
                 +work-card('https://i.ibb.co/7RJP7vp/2.jpg', '1838 - 1844','Concierto para violín en mi menor, Op. 64 - Felix Mendelssohn', 'https://www.youtube.com/watch?v=V5bsQsqHY1M')
                 +work-card('https://i.ibb.co/bbgMWDJ/3.jpg', '1806', 'Concierto para violín en re mayor, Op. 61 - Ludwig van Beethoven', 'https://www.youtube.com/watch?v=DoVwXtJkycU')
@@ -91,7 +98,7 @@ html(lang="en")
                 +work-card('https://i.ibb.co/MhvWtK4/7.jpg','1853','Dance of the Goblins -Antonio Bazzini', 'https://www.youtube.com/watch?v=QUlH6gFEDbw')
                 +work-card('https://i.ibb.co/SRS9KSx/8.jpg','1703 - 1720','Sonatas y partitas - J.S. Bach', 'https://www.youtube.com/watch?v=wqaFYeZ6D3o')
                 +work-card('https://i.ibb.co/WWrnSnP/9.jpg', '1935','Dem Andenken eines Engels - Alban Berg', 'https://www.youtube.com/watch?v=SjeAFcwHmR0')    
-        section(class="learning") 
+        section(class="learning" id="learning") 
             h2 
                 span Métodos de
                 br
@@ -99,10 +106,10 @@ html(lang="en")
             p(class="learning__description") Los métodos de aprendizaje para violín son sistemas estructurados y pedagógicos diseñados para enseñar a los estudiantes cómo tocar el violín. Estos métodos pueden variar en su enfoque, pero todos tienen como objetivo desarrollar la técnica del violín, la musicalidad, la teoría musical y la interpretación. Estos métodos suelen incluir una serie de ejercicios progresivos, estudios y piezas que permiten a los estudiantes mejorar gradualmente sus habilidades. 
             include ./components/method-card.pug
             div(class="learning__methods") 
-                +method-card('https://i.ibb.co/zFHW0pk/pexels-tima-miroshnichenko-6670758.jpg','Método <br> Suzuki', 'Shinichi Suzuki', 'El Método Suzuki para violín es un enfoque de enseñanza desarrollado por el famoso violinista japonés Shinichi Suzuki. Este método se basa en la idea de que cualquier niño puede aprender a tocar el violín si se le proporciona un entorno adecuado y se le enseña de manera sistemática desde una edad temprana. El método Suzuki es un gran mecanismo para aprender a tocar un instrumento musical. Está recopilado en la actualidad en pdfs y audios para piano, flauta dulce, flauta traversa, contrabajo, canto, violonchelo, violín, charango, arpa, viola, Tarka, mandela, guitarra y ocarina. Este método es más orientado a niños pero no deja de ser bueno también para mayores que quieren iniciar a aprender a tocar su instrumento. El papel de los padres es muy importante. Cuando un niño aprende a decir sus primeras palabras, los padres actúan arduamente como profesores. Ellos son una ficha clave «profesores en el hogar» cuando el niño está aprendiendo a tocar un instrumento.')
-                +method-card('https://i.ibb.co/8rxxjYC/pexels-caleb-oquendo-3042512.jpg','Método <br> D. Alard', 'Delphin Alard', 'El Método D. Alard para violín es un enfoque de enseñanza desarrollado por Delphin Alard, un destacado violinista y profesor francés. Este método fue adoptado en el Conservatorio de París y se ha utilizado ampliamente en la enseñanza del violín. El método de Alard está clasificado en ocho cursos, siguiendo la práctica adoptada en todos los conservatorios. Cada curso se centra en diferentes aspectos de la técnica del violín, permitiendo a los estudiantes progresar de manera sistemática y metódica. El método de Alard se caracteriza por su enfoque en la técnica del violín. Los ejercicios y estudios están diseñados para ayudar a los estudiantes a dominar las habilidades técnicas esenciales del violín, como la velocidad de los dedos, la coordinación del arco y los dedos, los cambios de posición, la independencia entre los dedos, las dobles cuerdas, el vibrato, la afinación, entre otros. Además de los ejercicios técnicos, el método de Alard también incluye una serie de piezas y estudios que están ordenados por dificultad1. Estas piezas permiten a los estudiantes aplicar las habilidades técnicas que han aprendido en un contexto musical.')
-                +method-card('https://i.ibb.co/51mhRsJ/pexels-shvets-production-8929333.jpg', 'Método <br> Laoureux', 'Nicolás Laoureux','El Método Laoureux para violín es un enfoque de enseñanza desarrollado por Nicolás Laoureux. Este método está lleno de ejercicios de todo tipo, con el se puede llegar a un nivel muy avanzado. El método Laoureux es una buena opción para aquellos adultos que quieren empezar progresivamente a aprender violín, pero no les interesa tanto la musicalidad de lo que tocan, y entienden que con la técnica adecuada, luego podrán tocar lo que quieran. Este método comprende los principios fundamentales de la técnica, abarcando desde la correcta posición del violín y arco hasta los estudios de arpegios, saltillos y diversas escalas mayores. Los ejercicios y estudios están diseñados para ayudar a los estudiantes a dominar las habilidades técnicas esenciales del violín, como la velocidad de los dedos, la coordinación del arco y los dedos, los cambios de posición, la independencia entre los dedos, las dobles cuerdas, el vibrato, la afinación, entre otros.')
-        section(class="artists") 
+                +method-card('https://i.ibb.co/zFHW0pk/pexels-tima-miroshnichenko-6670758.jpg','Método S. Suzuki', 'Shinichi Suzuki', 'El Método Suzuki para violín es un enfoque de enseñanza desarrollado por el famoso violinista japonés Shinichi Suzuki. Este método se basa en la idea de que cualquier niño puede aprender a tocar el violín si se le proporciona un entorno adecuado y se le enseña de manera sistemática desde una edad temprana. El método Suzuki es un gran mecanismo para aprender a tocar un instrumento musical. Está recopilado en la actualidad en pdfs y audios para piano, flauta dulce, flauta traversa, contrabajo, canto, violonchelo, violín, charango, arpa, viola, Tarka, mandela, guitarra y ocarina. <br><br> Este método es más orientado a niños pero no deja de ser bueno también para mayores que quieren iniciar a aprender a tocar su instrumento. El papel de los padres es muy importante. Cuando un niño aprende a decir sus primeras palabras, los padres actúan arduamente como profesores. Ellos son una ficha clave «profesores en el hogar» cuando el niño está aprendiendo a tocar un instrumento.')
+                +method-card('https://i.ibb.co/8rxxjYC/pexels-caleb-oquendo-3042512.jpg','Método D. Alard', 'Delphin Alard', 'El Método D. Alard para violín es un enfoque de enseñanza desarrollado por Delphin Alard, un destacado violinista y profesor francés. Este método fue adoptado en el Conservatorio de París y se ha utilizado ampliamente en la enseñanza del violín. El método de Alard está clasificado en ocho cursos, siguiendo la práctica adoptada en todos los conservatorios. Cada curso se centra en diferentes aspectos de la técnica del violín, permitiendo a los estudiantes progresar de manera sistemática y metódica. El método de Alard se caracteriza por su enfoque en la técnica del violín. <br><br> Los ejercicios y estudios están diseñados para ayudar a los estudiantes a dominar las habilidades técnicas esenciales del violín, como la velocidad de los dedos, la coordinación del arco y los dedos, los cambios de posición, la independencia entre los dedos, las dobles cuerdas, el vibrato, la afinación, entre otros. Además de los ejercicios técnicos')
+                +method-card('https://i.ibb.co/51mhRsJ/pexels-shvets-production-8929333.jpg', 'Método Laoureux', 'Nicolás Laoureux','El Método Laoureux para violín es un enfoque de enseñanza desarrollado por Nicolás Laoureux. Este método está lleno de ejercicios de todo tipo, con el se puede llegar a un nivel muy avanzado. El método Laoureux es una buena opción para aquellos adultos que quieren empezar progresivamente a aprender violín, pero no les interesa tanto la musicalidad de lo que tocan, y entienden que con la técnica adecuada, luego podrán tocar lo que quieran. Este método comprende los principios fundamentales de la técnica, abarcando desde la correcta posición del violín y arco hasta los estudios de arpegios, saltillos y diversas escalas mayores. <br><br> Los ejercicios y estudios están diseñados para ayudar a los estudiantes a dominar las habilidades técnicas esenciales del violín, como la velocidad de los dedos, la coordinación del arco y los dedos, los cambios de posición, la independencia entre los dedos, las dobles cuerdas, el vibrato, la afinación, entre otros.')
+        section(class="artists" id="artists") 
             h2 
                 span Grandes 
                 br
@@ -117,7 +124,7 @@ html(lang="en")
                         b Descripción
             hr
             include ./components/artist-card.pug
-            ul(class="artists__slider")
+            ul(class="artists__slider" id="artistsSlider")
                         +artist-card('Arcangelo<br> Corelli', 'https://i.ibb.co/wcL0Hrb/1.jpg', 'Corelli fue uno de los primeros en aplicar plenamente, con un propósito expresivo y estructurante, el nuevo sistema tonal recientemente consolidado después de al menos doscientos años de experimentación. Como violinista virtuoso fue considerado uno de los más grandes de su generación y contribuyó, a colocar el violín entre los instrumentos solistas más prestigiosos.')
                         +artist-card('Francesco<br> Veracini', 'https://i.ibb.co/fpHS4tf/2.jpg', 'Veracini viajó y trabajó en varias ciudades europeas, incluyendo Venecia, Londres, Düsseldorf y Praga. En Venecia, escribió un conjunto de sonatas para violín dedicadas al Príncipe Federico Augusto (futuro Augusto III de Polonia). En Londres, sus interpretaciones en los entreactos de las óperas representadas en el Queen´s Theatre de Westminster suscitaron gran entusiasmo del público.')
                         +artist-card('Antonio<br> Vivaldi', 'https://i.ibb.co/CnxbR1y/3.jpg', 'Es especialmente popular como autor de la serie de conciertos para violín y orquesta Las cuatro estaciones. Muchas de sus composiciones las escribió para el conjunto musical femenino del Ospedale della Pietà, un hogar para niños abandonados. Vivaldi había trabajado allí como sacerdote católico durante dieciocho meses y estuvo empleado de 1703 a 1715 y de 1723 a 17401.')
@@ -126,13 +133,13 @@ html(lang="en")
                         +artist-card('Niccolò<br> Paganini', 'https://i.ibb.co/DrtRDzG/6.jpg', 'Contribuyó con sus aportaciones al desarrollo de la «técnica moderna del violín». Paganini dominó todos los secretos del violín antes de cumplir los catorce años, al extremo de que sus profesores reconocían no tener nada más que enseñarle. <br><br>Tuvo como maestros a Giovanni Servetto y Alessandro Rolla. <br><br>Los “24 Caprichos para violín” son una de sus obras más conocidas y han servido de inspiración a numerosos compositores.')
                         +artist-card('Itzhak<br> Perlman', 'https://i.ibb.co/68KXQpw/7.jpg', 'Es un reconocido violinista, director de orquesta y maestro israelí. Considerado uno de los mejores violinistas del mundo, Perlman ha tenido una carrera internacional brillante desde que ganó la Leventritt Competition en 1964. <br><br>A lo largo de su carrera, Perlman ha realizado numerosas giras y ha actuado con frecuencia en conciertos junto al violinista estadounidense de origen israelí Pinchas Zuckerman.')
             div(class="artists__buttons") 
-                button(class="artists__button--previous" type="button") 
+                button(class="artists__button--previous" type="button" id="previousArtist") 
                     figure 
                         img(src="https://i.ibb.co/jwPqVky/Group-21.png", alt="Anterior", title="Anterior")
-                button(class="artists__button--next" type="button")  
+                button(class="artists__button--next" type="button" id="nextArtist")  
                     figure 
                         img(src="https://i.ibb.co/1Xm9tF2/Group-20.png", alt="Siguiente", title="Siguiente")
-        section(class="tips") 
+        section(class="tips" id="tips") 
             h2
                 span Consejos de 
                 br
@@ -156,7 +163,7 @@ html(lang="en")
                 +technology('https://i.ibb.co/yffctKx/git.png', 'Git. Versiones')
                 +technology('https://i.ibb.co/fGVBJhz/copilot-color.png', 'Copilot. Textos')
                 +technology('https://i.ibb.co/jyB3QVQ/figma.png', 'Figma. Diseño')
-            p(class="footer__date") Febrero 2024
+            p(class="footer__date") Marzo 2024
             a(href="https://platzi.com/p/ricardo-racm/" class="footer_link")
                 h4 Ricardo Cifuentes. 
                     br
@@ -174,6 +181,10 @@ html(lang="en")
                 | Iconos proporcionados por Flaticon.
                 br 
                 |Los derechos de autor de los iconos pertenecen a sus respectivos autores.
+        script(src="../../../src/scripts/menu.js") 
+        script(src="../../../src/scripts/worksSlider.js") 
+        script(src="../../../src/scripts/artistsSlider.js") 
+        script(src="../../../src/scripts/methodDescription.js") 
 
         
         

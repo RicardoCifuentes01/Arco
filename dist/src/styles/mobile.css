@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #F6F6F6;
+}
+
 h1 {
   color: #1F1F1F;
 }
@@ -70,26 +74,104 @@ p, figcaption {
 }
 
 .header {
-  padding: 20px 20px 0;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  height: 42px;
+  z-index: 1;
 }
 
-.header__button--close, .header__nav, .header__date, .header__author {
+.header__logo-buttons, .header__nav-information {
+  padding: 10px 10px;
+  width: 100%;
+  background-color: rgba(246, 246, 246, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.header__button--open {
+  width: 28px;
+}
+
+.header__button--close, .header__date, .header__author {
   display: none;
 }
 
 .header__logo {
   font-family: "Italiana";
-  font-size: 36px;
+  font-size: 21px;
+  color: #1F1F1F;
+}
+
+.header__logo-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hr {
   display: none;
 }
 
+.header__nav-information {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92vh;
+  transform: translate(-100vw, 0);
+  transition: 0.1s ease;
+}
+
+.header__nav {
+  width: 100%;
+}
+.header__nav ul {
+  list-style: none;
+  padding: 0;
+}
+.header__nav li {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-bottom: 1px solid #1F1F1F;
+}
+.header__nav li a {
+  color: #1F1F1F;
+}
+
+.header__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__date {
+  display: block;
+  margin: 20px auto;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.header__author {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-decoration: none;
+  font-family: "Hind Guntur";
+  font-size: 14px;
+  color: #1F1F1F;
+}
+.header__author h4 {
+  width: -moz-max-content;
+  width: max-content;
+}
+.header__author figure {
+  width: 40px;
+  margin: 0;
+}
+.header__author figure img {
+  margin: 0;
+}
+
 .main {
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .works {
@@ -143,6 +225,7 @@ p, figcaption {
 
 .learning__method {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s;
 }
 .learning__method h3 {
   width: 100%;
@@ -189,21 +272,29 @@ p, figcaption {
   border-radius: 100%;
 }
 
+.learning__method__description, .learning__method__button--back {
+  display: none;
+}
+
 .learning__method__figure {
   margin: 0;
   filter: grayscale(100%);
   max-width: none;
+  transition: filter 0.1s linear;
 }
 .learning__method__figure img {
   margin: 0;
 }
 
 .learning__method__description {
-  display: none;
+  margin-top: 20px;
+  color: #F6F6F6;
 }
 
 .learning__method__button--back {
-  display: none;
+  margin-left: 80%;
+  margin-top: 10px;
+  background-color: #F6F6F6;
 }
 
 .artists {

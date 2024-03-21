@@ -1,31 +1,5 @@
-.header {
-  align-items: center;
-}
-
-.header__logo {
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.header__button--open {
-  display: none;
-}
-
-.header__nav {
-  display: block;
-}
 .header__nav ul {
-  display: flex;
-  gap: 80px;
-  list-style: none;
-}
-.header__nav ul li {
-  font-size: 12px;
-}
-
-.hr {
-  display: block;
-  margin: 0 20px;
+  gap: 40px;
 }
 
 .main__title {
@@ -44,6 +18,10 @@
   gap: 20px;
 }
 
+.works__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
 .works__buttons button {
   display: inline;
   margin: 40px 5px;
@@ -67,6 +45,16 @@
 
 .works__slider .works__works__slider__work {
   width: 300px;
+}
+
+.learning__methods {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.learning__method {
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .artists__slider li {
