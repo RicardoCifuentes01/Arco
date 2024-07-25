@@ -1,6 +1,6 @@
 {
   "name": "arco",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Proyecto web blog sobre el violín. Construido con Pug, SASS y JS.",
   "main": "index.js",
   "scripts": {

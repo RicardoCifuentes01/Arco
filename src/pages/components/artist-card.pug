@@ -1,0 +1,6 @@
+mixin artist-card(title, name, url, description)
+    li
+        h3!= name 
+        figure 
+            img(src=url, alt=name, title=title)
+            figcaption!= description

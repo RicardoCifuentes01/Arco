@@ -1,0 +1,22 @@
+mixin method-card(url, title, author, description)
+    div
+        figure
+            img(src=url, title=title, alt=title)
+        div 
+            h3!= title 
+            p= author
+            button(type="button") 
+                svg(width="40" height="40" viewBox="0 0 40 40" fill="none")
+                    rect(width="40" height="40" rx="20" fill="black")
+                    path(d="M10 20C10 18.8954 10.6716 18 11.5 18H28.5C29.3284 18 30 18.8954 30 20C30 21.1046 29.3284 22 28.5 22H11.5C10.6716 22 10 21.1046 10 20Z" fill="white")
+                    path(d="M20 30C18.8954 30 18 29.3284 18 28.5L18 11.5C18 10.6716 18.8954 10 20 10C21.1046 10 22 10.6716 22 11.5V28.5C22 29.3284 21.1046 30 20 30Z" fill="white")
+                    title Más información
+                    desc Más información
+            p!= description
+            button(type="button") 
+                svg(width="40" height="40" viewBox="0 0 40 40" fill="none")
+                    rect(width="40" height="40" rx="20" fill="black")
+                    rect(x="12.0356" y="19.6067" width="15" height="5" rx="2.5" transform="rotate(-45 12.0356 19.6067)" fill="white")
+                    rect(x="15.5355" y="16.5708" width="15" height="5" rx="2.5" transform="rotate(45 15.5355 16.5708)" fill="white")
+                    title Regresar
+                    desc Regresar

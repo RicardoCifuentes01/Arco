@@ -1,0 +1,8 @@
+mixin tip-card(number, url, title, titleTip ,description)
+    div
+        div
+            p!= number 
+            figure
+                img(src=url, alt=title, title=title)
+        h3!= titleTip
+        p!= description
