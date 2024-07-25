@@ -1,0 +1,30 @@
+{
+  "name": "arco",
+  "version": "0.0.0",
+  "description": "Proyecto web blog sobre el violín. Construido con Pug, SASS y JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoCifuentes01/Arco"
+  },
+  "keywords": [
+    "blog",
+    "violin",
+    "pug",
+    "sass",
+    "js"
+  ],
+  "author": "Ricardo Andrey Cifuentes Martínez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RicardoCifuentes01/Arco/issues"
+  },
+  "homepage": "https://github.com/RicardoCifuentes01/Arco#readme",
+  "devDependencies": {
+    "pug": "^3.0.3",
+    "sass": "^1.77.8"
+  }
+}
